@@ -284,38 +284,29 @@ section {
 
 .home-image {
     position: relative;
+    width: 100%; /* Make the container responsive */
+    overflow: hidden; /* Hide any overflowing image content */
 }
 
 .img-box {
     text-align: center;
 }
 
-    .img-box img {
-        width: 70%;
-        /* لجعل الصورة تملأ الحاوية */
-        height: 30px;
-        /* لجعل الصورة تملأ الحاوية */
-        object-fit: cover;
-        height: auto;
-        margin-top: -80px;
-        /* رفع الصورة لأعلى بمقدار 20px */
-    }
+.img-box img {
+    width: 100%; /* Image takes full width of container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent any extra spacing below image */
+}
 
 .liquid-shape {
     position: absolute;
-    top: -20px;
-    /* رفع العنصر لأعلى بمقدار 20px */
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* لجعله خلف الصورة */
+    filter: blur(50px); /* Apply blur to all liquid shapes */
 }
-
-    .liquid-shape:nth-child(2) {
-        filter: blur(50px);
-    }
-
 /*About Section Css ---------------------------------------------------------  */
 .about-content {
     width: 100%;
